@@ -4,6 +4,7 @@ import kagglehub
 import os
 import matplotlib.pyplot as plt
 import seaborn as sns
+import io
 
 st.title('Amazon Sales Data Analysis')
 
@@ -37,7 +38,7 @@ if df is not None:
 
 
     st.write("### Data Info")
-    buffer = pd.io.StringIO()
+    buffer = io.StringIO()
     df.info(buf=buffer)
     st.text(buffer.getvalue())
 
